@@ -3,6 +3,7 @@ import pandas as pd
 import dash
 from dash import dcc
 from dash import html
+from flask app import app
 
 app = dash.Dash(__name__)
 
@@ -24,4 +25,5 @@ app.layout = html.Div(children=[
 ])
 
 if __name__ == "__main__":
-    app.run(host='localhost', port=8050)
+    #app.run(host='localhost', port=8050)
+    application = app.server
