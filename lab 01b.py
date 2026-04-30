@@ -3,9 +3,10 @@ import pandas as pd
 import dash
 from dash import dcc
 from dash import html
-from flask app import app
+#from flask app import app
 
 app = dash.Dash(__name__)
+server = app.server # necessary line for flask
 
 df = pd.DataFrame({
                 "Flower":["Roses","Tulips","Orchids","Roses","Tulips","Orchids","Roses","Tulips","Orchids"],
@@ -26,4 +27,5 @@ app.layout = html.Div(children=[
 
 if __name__ == "__main__":
     #app.run(host='localhost', port=8050)
-    application = app.server
+   app.run(host="0.0.0.0", port=8080)  
+   #application = app.server
