@@ -25,4 +25,4 @@ app.layout = html.Div([
 
 # Local run only
 if __name__ == "__main__":
-    server = app.server
+    app.run(debug=True)
